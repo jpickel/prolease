@@ -1,0 +1,84 @@
+/* Removes Unneeded Items */
+
+.menu-icon-jetpack, 
+.menu-icon-dashboard .wp-submenu, 
+.blavatar, 
+.toplevel_page_jetpack, 
+#collapse-menu, 
+.menu-icon-tools, 
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(2), 
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(3),
+#contextual-help-link-wrap,
+#toplevel_page_edit-post_type-acf .wp-submenu, 
+#multisite_clone_metabox,
+#nf_admin_metaboxes_appendaform {
+    display: none !important;
+}
+
+/* Augments Admin Sidebar Menu */
+
+.wp-menu-separator {
+	height:  10px;
+	background-color:  #000;
+	border-top:  1px solid #333;
+	border-bottom:  1px solid #333;
+}
+
+/* Include Toolbar ACF */
+
+#acf-include_toolbar p.label {
+    display: none;
+}
+
+#acf-include_toolbar ul {
+    font-weight: bold;
+}
+
+    #acf-include_toolbar ul:after {
+        display: block;
+        content: "When checked, the toolbar will be placed below the page's header & navigation.";
+        font-size: 12px;
+        line-height: 1.5em;
+        margin: 0 0 1em;
+        padding: 0;
+        color: #666666;
+        text-shadow: 0 1px 0 #FFFFFF;
+        font-weight: normal;
+    }
+    
+/* Marquee WYSIWYG ACF */
+
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-underline,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-blockquote,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-strikethrough,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-bullist,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-numlist,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-alignleft,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-aligncenter,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-alignright,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-undo,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-redo,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-link,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-unlink,
+[data-field_name="content_area_marquee_headline"] .acf_wysiwyg .mce-i-fullscreen,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-underline,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-blockquote,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-strikethrough,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-bullist,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-numlist,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-alignleft,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-aligncenter,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-alignright,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-undo,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-redo,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-link,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-unlink,
+[data-field_name="content_area_marquee_subheadline"] .acf_wysiwyg .mce-i-fullscreen {
+    display: none;
+}
+
+[data-field_name="content_area_marquee_headline"] .mce-edit-area,
+[data-field_name="content_area_marquee_subheadline"] .mce-edit-area {
+    height: 100px !important;
+    overflow: hidden;
+}

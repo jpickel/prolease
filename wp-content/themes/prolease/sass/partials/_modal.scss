@@ -1,0 +1,23 @@
+// Changes to Bootstrap Modal.
+
+.modal {
+    text-align: center;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    &-dialog {
+        width: 80vw;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+    &-body {
+        margin: 100px;
+    }
+    .close:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,165 @@
+.form {
+	border-top: 10px solid $red;
+    background-color: $dark-grey;
+    padding: 25px;
+    color: $white;
+    float: left;
+    letter-spacing: 1px;
+    width: 100%;
+
+    &.submitted {
+    	background-color: transparent;
+    	color: #000;
+    	border-top: none;
+    }
+}
+
+.nf-field-container {
+	clear: none !important;
+	margin-bottom: 40px;
+}
+
+.nf-field-label {
+  opacity: 1;
+  position: absolute;
+  top: 0em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  // z-index: -1; 
+}
+
+.nf-field-label.show {
+  // opacity: 1;
+  top: -1em;
+  // z-index: 1;
+}
+
+.list-checkbox-wrap, .checkbox-wrap, .textarea-wrap {
+	
+	.nf-field-label {
+	  opacity: 1;
+	  position: relative;
+	  top: 0px;
+	  transition: all 0.1s linear;
+	  z-index: 0;
+	  font-size: 16pt;
+	  letter-spacing: 2px;
+	}
+
+}
+
+.checkbox-wrap .nf-field-label {
+	margin-left: 10px;
+}
+
+.nf-error .ninja-forms-field {
+	border: none !important;
+	border-bottom: 4px solid $red !important;
+}
+
+.nf-error-required-error {
+	position: absolute;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid $medium-grey;
+    color: $white;
+
+    &:focus {
+    	outline: none;
+    	border-bottom: 4px solid $red;
+    }
+
+	@include placeholder {
+	    color: $white;
+	}
+}
+
+textarea {
+	color: $medium-grey;
+	padding: 10px;
+}
+
+.nf-field .list-checkbox-wrap .nf-field-element li input {
+	width: 30px !important;
+}
+
+.form input[type=checkbox] {
+	position: absolute;
+	width: 30px !important;
+	height: 30px !important;
+	margin: 0px !important;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .after-checkbox {
+	background: $dark-grey url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1REMzNThFRjY4QTcxMUU3QkFBNkVFMDgzN0ZDN0FCQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1REMzNThGMDY4QTcxMUU3QkFBNkVFMDgzN0ZDN0FCQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVEQzM1OEVENjhBNzExRTdCQUE2RUUwODM3RkM3QUJCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVEQzM1OEVFNjhBNzExRTdCQUE2RUUwODM3RkM3QUJCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+3m86cAAAAK9JREFUeNpi/P//PwOFoB+IRRlABlGA0/9DwCNKDImDGnISiNnINSQIasgtmBg5hnhDDXkAxNzkGuQENeQtEHMiy5FiiAXUkK9ALIYuDyI6gHgyAUOMoIb8BmIZbGpAxBqoonochij/RwBVXJbBGDOgCmvRFKggGaKDz9XInHVQDUVQPj/UKyBgSCgM0QW2QDVWAPENKNuOmMjAJngYyTtOxMYqLolDQJxJShoDCDAAhDvlTGK7TawAAAAASUVORK5CYII=") no-repeat 55% 50%;
+}
+
+.show label {
+	font-size: 10pt;
+	vertical-align: top;
+}
+
+.after-checkbox {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: solid 2px $red;
+	background: $dark-grey;
+	cursor: pointer;
+}
+
+.nf-field-element ul li {
+	position: relative;
+
+	label {
+		vertical-align: top;
+		margin-left: 10px !important;
+		cursor: pointer;
+	}
+}
+
+.form-image {
+    width: 100%;
+    @media (min-width: #{$screen-md-min}) {
+        margin-top: -400px; 
+    }
+}
+
+.hidden-container {
+	display: none;
+}
+
+.resource-form-section {
+	padding: 50px 0px 0px;
+}
+
+.file-wrap {
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	padding-bottom: 50px;
+
+	&.show {
+		position: relative;
+		opacity: 1;
+	}
+}
+
+.nf-form-title h3 {
+	margin-bottom: 25px;
+}
+
+.nf-form-fields-required {
+    position: absolute;
+    top: 65px;
+    right: 55px;
+    color: $red;
+    padding: $padding-default 0px;
+}

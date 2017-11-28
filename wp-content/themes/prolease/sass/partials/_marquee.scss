@@ -1,0 +1,28 @@
+.marquee {
+
+    background-image:  url(../images/default-marquee-bg.png);
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    padding: $padding-xxl 0px;
+    
+    & h1 {
+    
+        font-size: $font-size-xl;
+        font-weight: 400;
+        line-height: ($font-size-xl * 1.4);
+        padding: 0px 0px $padding-sm 0px;
+        text-transform: uppercase;
+        
+        & strong {
+            display: block;
+        }
+        
+    }
+    
+    & h2 {
+        font-size:  $font-size-lg;
+        font-weight: 400;
+    }
+    
+}

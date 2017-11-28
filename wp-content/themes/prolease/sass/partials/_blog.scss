@@ -1,0 +1,161 @@
+.intro-section {
+	padding: 25px 0px;
+	background-color: $off-white;
+}
+
+.blog-section {
+	background-color: $off-white;
+	padding: 25px 0px 50px;
+}
+
+.all-posts-section {
+    padding: 50px 0px 50px;
+    background-color: $off-white;
+}
+
+.single-post-section {
+	padding: 50px 0px;
+	background-color: $off-white;
+}
+
+.blog-post {
+    border-left: 6px solid $fill-red;
+    padding: 20px;
+    border-top: 0px;
+    background-color: $white;
+    margin-bottom: 30px;
+
+	&__title {
+		margin-top: 0px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__link {
+		color: $red;
+
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+	&__author {
+		margin-bottom: 0px;
+	}
+
+	&__date {
+		text-align: center;
+	}
+}
+
+#blog-post-1 {
+}
+
+.blog-dropdown {
+	margin: 0px 0px 40px;
+	& :first-child {
+	    margin-bottom: $margin-default;
+	}
+}
+
+.date {
+
+	&__month {
+		text-transform: uppercase;
+		font-weight: 600;
+		display: block;
+	}
+
+	&__day {
+		font-size: 26pt;
+		font-weight: 600;
+		line-height: 1;
+	}
+}
+
+.date-divider {
+    margin: 0px 4px -8px 4px;
+    border-top: 1px solid $medium-grey;
+}
+
+.events {
+    @media (max-width: #{$screen-xs-max}) {
+        padding: 0px 15px;
+    }
+    @media (min-width: #{$screen-sm-min}) {
+        margin-left: 25px;
+        padding: 25px;
+    }
+}
+
+.event {
+	float: left;
+	border-left: 6px solid $midnight-grey;
+	background-color: $white;
+	width: 100%;
+	margin-bottom: 30px;
+	min-height: 130px;
+	padding-right: 15px;
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+
+	&__heading {
+		text-align: center;
+		color: $dark-grey;
+		margin-top: 0px;
+		margin-bottom: 40px;
+	}
+
+	&__date {
+		float: left;
+		text-align: center;
+		padding: 25px;
+	}
+
+	&__content {
+	}
+
+	&__month {
+		text-transform: uppercase;
+		font-size: 20pt;
+	}
+
+	&__day {
+		font-size: 30pt;
+		font-weight: 600;
+		line-height: 0.5;
+	}
+
+	&__title {
+		color: $midnight-grey;
+		font-weight: 600;
+		margin: 25px 0px 0px 95px;
+	}
+
+	&__location {
+		color: $medium-grey;
+		font-weight: 100;
+		margin: 0px 0px 10px 95px
+	}
+}
+
+.all-posts {
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 15px 0px;
+	font-weight: 600;
+}
+
+.prev-next-posts {
+    margin: 20px 0px;
+}
+
+.prev-posts-link, .next-posts-link {
+	display: inline-block;
+	margin: 0px 15px;
+}

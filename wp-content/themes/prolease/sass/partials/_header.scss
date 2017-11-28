@@ -1,0 +1,42 @@
+.header {
+
+    position: relative;
+
+    &__container {
+        position: relative;
+    }
+    
+    &__logo {
+        padding: $padding-xl $padding-default;
+        width: 300px;
+    }
+
+    &__phone {
+        padding-right: 40px;
+        text-align: center;
+    }
+
+    &__contact {
+        position: absolute;
+        bottom: 0px;
+        right: 15px;
+        z-index: 99;
+        padding-right: $padding-lg;
+        @media (max-width: #{$screen-xs-max}) {
+            right: 60px;
+            bottom: -42px;
+        }
+        @media (min-width: #{$screen-md-min}) {
+            bottom: -42px;
+        }
+    }
+    
+}
+
+#toolbar {
+    background-color: $dark-grey;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}

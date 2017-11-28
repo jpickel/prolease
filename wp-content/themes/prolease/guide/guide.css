@@ -1,0 +1,170 @@
+.about-wrap {
+    max-width: 9999999px !important;
+}
+
+#wpfooter {
+    display: none;
+}
+
+body.wpmanuals {
+    font-size: 12pt;
+    line-height: 18pt;
+    font-weight: 400;
+    background-color: #f1f1f1;
+}
+
+.nav-pills {
+    margin-top:  20px;
+}
+
+dd {
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-family: Arial;
+}
+
+h4 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	color: #666 !important;
+	font-size: 12pt;
+}
+
+.dl-horizontal {
+	margin-top:  20px;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+img.image {
+	border: 1px solid rgba(0,0,0,0.1) !important;
+	background-color: #fff !important;
+	padding:  7px !important;
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.05) !important;
+}
+
+.nav-pills>li>a {
+    color: #666666;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff;
+    padding-left:  25px !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: transparent;
+    color: #333333;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav-pills>li.active>a {
+    background-color: transparent;
+    color: #333333;
+    border-left: 5px solid #333333;
+    border-radius: 0px;
+    padding-left: 20px !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav-pills>li>a:hover {
+    background-color: #333333;
+    color: #fff;
+    border-radius: 0px;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+@media (max-width: 767px) {
+    #navigation.affix {
+        position: relative !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #navigation.affix {
+        top: 50px;
+    }
+    #navigation.affix + #guide {
+        left: 33.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    #navigation.affix + #guide {
+        left: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #navigation.affix + #guide {
+        left: 16.66666667%;
+    }
+}
+
+.classic, .classic p, .classic h1, .classic h2, .classic h3, .classic h4, .classic h5, .classic h6 {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    border: none;
+    margin: 0px;
+    color: #000 !important;
+    text-transform: none;
+}
+
+.classic {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+}
+
+.classic h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.classic h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.classic h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.classic h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.classic h5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.classic h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+

@@ -1,0 +1,250 @@
+.navbar {
+
+	margin-bottom: 0px;
+	
+	&-header {
+	    button {
+	        @media (max-width: #{$screen-xs-max}) {
+	            position: absolute;
+	            top: -70px;
+	            right: 0px;
+	        }
+	    }
+	}
+	
+    &-collapse {
+        padding-left: 0px;
+        padding-right: 0px;
+        border-color: $midnight-grey;
+        &.in {
+            margin: 0px -16px -1px -16px;
+        }
+    }
+    &-nav {
+        padding: 0px 0px $padding-default 0px;
+        @media (max-width: #{$screen-xs-max}) {
+            padding-bottom: 0px;
+        }
+        & li {
+            font-size: 14pt;
+            letter-spacing: 0.05em;
+            color: $midnight-grey;
+        	text-transform: uppercase;
+        	a {
+        	    padding: $padding-default 0px 0px 0px;
+        	    margin: 0px $margin-lg 0px 0px;
+        	    @media (max-width: #{$screen-xs-max}) {
+        	        padding: $padding-default $padding-lg $padding-default $padding-lg;
+        	    }
+        	    &:hover {
+        	        @media (max-width: #{$screen-xs-max}) {
+        	            background-color: $light-grey !important;
+        	            margin-right: 0px;
+        	        }
+        	    }
+        	}
+        }
+    }
+    
+    &-toggle {
+        &:focus[aria-expanded=false] {
+            background-color: $white !important;
+        }
+        &:hover {
+            background-color: $white;
+            &[aria-expanded=false] {
+                background-color: $white !important;
+            }
+            .icon-bar {
+                background-color: $midnight-grey
+            }
+        }
+        &[aria-expanded=true] {
+            .icon-bar {
+                background-color: $midnight-grey;
+            }
+        }
+    }
+}
+
+.navbar-main {
+	border-bottom: 5px solid #333;
+	position: relative;
+	z-index: 10;
+
+	& .active {
+		font-weight: 600;
+		
+	}
+	
+	.add-toolbar {
+	    [aria-expanded=true] {
+	        @media (max-width: #{$screen-xs-max}) {
+	            background-color: $midnight-grey !important;
+	            color: $white !important;
+	            margin: 0px;
+	        }
+	        &:before {
+	            @media (max-width: #{$screen-xs-max}) {
+	                content: "< ";
+	            }
+	        }
+	    }
+	}
+	
+	& .schedule {
+	    a {
+	        @media (max-width: #{$screen-xs-max}) {
+	            background-color: $red !important;
+	            color: $white !important;
+	            margin-right: 0px;
+	        }
+	        &:hover {
+	            @media (max-width: #{$screen-xs-max}) {
+	                 background-color: $red !important;   
+	            }
+	        }
+	    }
+	}
+
+	& .active:after {
+		position: absolute;
+	  	bottom: -10px;
+		height: 0;
+	  	width: 0;
+	  	left: 50%;
+	    transform: translateX(-50%);
+	  	border: 8px solid transparent;
+	  	border-bottom-color: #333;
+	  	content: "";
+	  	margin-left: -8px;
+	  	@media (max-width: #{$screen-xs-max}) {
+	  	    display: none;
+	  	}
+	  	
+	}
+}
+
+// TOOLBAR
+
+.toolbar-nav {
+	@media (max-width: #{$screen-xs-max}) {
+	    position: absolute;
+	    top:175px;
+	    z-index: 999;
+	    width: 100%;
+	}
+	.flex {
+	    @media (max-width: #{$screen-xs-max}) {
+	        display: block;
+	    }
+	}
+	& .current-menu-item:after {
+	    position: absolute;
+	    bottom: 0;
+	    height: 0;
+	    width: 0;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    border: 8px solid transparent;
+	    border-bottom-color: #fff;
+	    content: "";
+	}
+	&__list {
+		list-style: none;
+		padding-left: 0px;
+		text-align: center;
+		justify-content: space-around;
+		margin-bottom: 0px;
+
+		& .current_page_item, .current-menu-item .lease-accounting-item__title {
+			font-weight: 600;
+		}
+
+		li {
+			display: inline-block;
+			padding: 18px 30px;
+			z-index: 1;
+			position: relative;
+			@media (max-width: #{$screen-xs-max}) {
+			    display: block;
+			}
+		}
+
+		a {
+			color: $white;
+			@media (max-width: #{$screen-xs-max}) {
+			    display: block;
+			    width: 100%;
+			    clear: both;
+			    height: 85px;
+			}
+		}
+		
+		.menu-image-hover-wrapper {
+		    display: block;
+		    margin: 0px auto;
+		    height: 85px;
+		    @media (max-width: #{$screen-xs-max}) {
+		        float: left;
+		    }
+		}
+		
+		.menu-image-title {
+		    @media (max-width: #{$screen-xs-max}) {
+		        float: left;
+		        padding-left: $padding-lg;
+		        height: 85px;
+		        margin-top: 20px;
+		    }
+		    &:after {
+		        @media (max-width: #{$screen-xs-max}) {
+		            clear: both;
+		            width: 100%;
+		            content: "";
+		        }
+		    }
+		}
+		
+	}
+
+	.toolbar-nav__list .menu-item a img {
+	    width: 75px;
+	}
+
+}
+
+.lease-accounting-item {
+	background-color: $red;
+	text-align: left;
+	.menu-image-title {
+	    float: none !important;
+	    height: auto !important;
+	    padding-left: 0px;
+	}
+	@media (max-width: #{$screen-xs-max}) {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+}
+
+.lease-accounting-text {
+    line-height: 12pt;
+    margin: 0;
+    font-size: 10pt;
+
+    &:hover {
+    	text-decoration: none;
+    }
+}
+
+.module-page {
+	max-height: 300px;
+}
+
+// FILTER NAV
+
+.filter-nav {
+	margin-bottom: 25px;
+	justify-content: center;
+}

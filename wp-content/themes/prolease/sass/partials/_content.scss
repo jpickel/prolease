@@ -1,0 +1,23 @@
+.content {
+
+    color: $light-grey;
+    padding: $padding-xl 0px;
+    
+    & a {
+        font-weight: 700;
+    }
+    
+    & h3 {
+        color: $red;
+        font-size: $font-size-md;
+    }
+    
+    & p {
+        padding-bottom: $padding-default;
+    }
+    
+    // & ul {
+    //     padding: 0px 0px $padding-default $padding-lg;
+    // }
+    
+}
