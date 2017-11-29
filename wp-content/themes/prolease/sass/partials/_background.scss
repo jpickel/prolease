@@ -99,8 +99,11 @@
         background-repeat: no-repeat;
         background-size: cover;
         overflow: auto;
-        @media (max-width: #{$screen-xs-max}) {
+        @media (max-width: #{$screen-md-max}) {
             background-position: center 100px;
+        }
+        @media (min-width: #{1650px}) {
+            background-position: center -5vw;
         }
         
         a {
