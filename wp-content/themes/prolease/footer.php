@@ -54,4 +54,7 @@
 
 <?php } ?>
 
+<!-- Multiview Page Tracking -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+
 <?php wp_footer(); ?>
