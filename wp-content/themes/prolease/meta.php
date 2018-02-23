@@ -62,9 +62,5 @@
 	
 	<!-- Multiview Page Tracking -->
 	<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-471e522de44fdc14606a3d077ac3063350d2ac04.js"></script>
-
-	<!-- TypeKit -->
-	<script src="https://use.typekit.net/sto2qze.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
     
 </head>

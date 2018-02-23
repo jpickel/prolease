@@ -44,7 +44,10 @@
 	  z-index: 0;
 	  font-size: 16pt;
 	  letter-spacing: 2px;
-	}
+	  &.show label {
+	      font-size: 16pt !important;
+        }
+    }
 
 }
 
@@ -78,12 +81,32 @@ input {
 }
 
 textarea {
+	@include transition($transition);
 	color: $medium-grey;
 	padding: 10px;
+	border: 4px solid $white;
+	resize: none;
+	&:focus {
+		@include transition($transition);
+        outline: none;
+        box-shadow: $box-shadow;
+    }
+}
+
+.nf-field .list-checkbox-wrap .nf-field-element li {
+    display: block;
+    margin-bottom: 10px !important;
+    clear: both;
 }
 
 .nf-field .list-checkbox-wrap .nf-field-element li input {
 	width: 30px !important;
+	float: left;
+}
+
+.nf-field .list-checkbox-wrap .nf-field-element li label {
+    margin-left: 45px !important;
+    padding-top: 2px;
 }
 
 .form input[type=checkbox] {
@@ -112,6 +135,7 @@ input[type=checkbox]:checked ~ .after-checkbox {
 	border: solid 2px $red;
 	background: $dark-grey;
 	cursor: pointer;
+	float: left;
 }
 
 .nf-field-element ul li {

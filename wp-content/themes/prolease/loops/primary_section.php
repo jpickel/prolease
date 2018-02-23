@@ -95,7 +95,7 @@
 					</div>
 				<?php } elseif($primary_content_type == "cta") { ?>
 				<!-- CTA Column -->
-					<div class="col-md-<?php echo $primary_column_width; ?> primary-wiz">
+					<div class="col-sm-12 col-md-<?php echo $primary_column_width; ?> primary-wiz">
 						<div class="cta-box--<?php echo $primary_cta_border_color; ?>">
 							<?php if(!empty($primary_wysiwyg)) { echo $primary_wysiwyg; } ?>
 							<div class="text-center">

@@ -409,7 +409,7 @@
 	}
 
 	&__type {
-		font-weight: 100;
+		@include din-light;
 		letter-spacing: 0.1em;
 		font-size: 0.878em;
 		text-transform: uppercase;
@@ -423,6 +423,7 @@
 	}
 
 	&__title {
+		@include din-light;
 		margin-top: 0px;
 		-webkit-transition: all $transition;
 		transition: all $transition;
@@ -430,7 +431,6 @@
 	}
 
 	&__link {
-
 		&:hover, &:hover .resource__title {
 			text-decoration: none;
 			color: $red !important;
@@ -472,6 +472,7 @@
 }
 
 .filter-list {
+	@include din-bold;
 	padding: 0px;
 	margin-bottom: 0px;
 	list-style: none;

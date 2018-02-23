@@ -4,47 +4,58 @@ html {
 }
 
 body {
-    font-family: "din-2014", arial;
+    @include din-regular;
     min-height: 100%;
     /*margin-bottom: 158px;*/
     color: $midnight-grey;
     letter-spacing: 0.025em;
+    font-weight: 100;
+}
 
+strong {
+    @include din-bold;
 }
 
 h1 {
+    @include din-light;
     font-size: 4.444em;
-    font-family: "din-2014", arial;
-    font-weight: 300;
     margin-bottom: 0px;
     letter-spacing: 0px;
+    strong {
+        @include din-bold;
+    }
 }
 
 h2 {
+	@include din-light;
     letter-spacing: 2px;
     font-size: 1.913em;
-    font-family: "din-2014", arial;
-    font-weight: 300;
+    strong {
+        @include din-bold;
+    }
 }
 
 h3 {
+    @include din-light;
     letter-spacing: 0.075em;
     margin-top: 10px;
     font-size: 1.476em;
-    font-family: "din-2014", arial;
-    font-weight: 300;
+    strong {
+        @include din-bold;
+    }
 }
 
 h4 {
+	@include din-light;
     font-size: 1.138em;
-    font-family: "din-2014", arial;
-    font-weight: 300;
     letter-spacing: 0.075em;
+    strong {
+        @include din-bold;
+    }
 }
 
 p {
     font-size: 1.296em;
-    font-family: "din-2014", arial;
 }
 
 select {

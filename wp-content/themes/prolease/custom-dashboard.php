@@ -13,8 +13,8 @@
     </div>
     <div class="col-md-7">
         <p class="lead">This is your website's Content Manager, or CMS. It makes it easy to add, edit, or update content on your website.</p>
-        <div class="logo">
-        	<img src="../images/logo.png">
+        <div class="logo col-xs-6 col-md-4">
+        	<img src="<?php bloginfo('template_directory'); ?>/images/logo.png">
         </div>
         <div class="clearfix"></div>
     </div>
@@ -52,7 +52,7 @@
     <div class="col-sm-8 col-md-9 col-lg-10" id="guide">
     
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane" id="introduction">
+            <div role="tabpanel" class="tab-pane active" id="introduction">
                 <?php include 'guide/introduction.php'; ?>
             </div>
             <div role="tabpanel" class="tab-pane" id="content">
@@ -67,7 +67,7 @@
             <div role="tabpanel" class="tab-pane" id="resources">
                 <?php include 'guide/resources.php'; ?>
             </div>
-            <div role="tabpanel" class="tab-pane active" id="forms">
+            <div role="tabpanel" class="tab-pane" id="forms">
                 <?php include 'guide/forms.php'; ?>
             </div>
             <div role="tabpanel" class="tab-pane" id="users">

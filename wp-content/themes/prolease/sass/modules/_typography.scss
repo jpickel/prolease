@@ -2,3 +2,44 @@ $font-size-default: 12pt;
 $font-size-md: $font-size-default * 1.25;
 $font-size-lg: $font-size-default * 1.65;
 $font-size-xl: $font-size-default * 3;
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+            url('#{$file-path}.woff') format('woff'),
+            url('#{$file-path}.ttf') format('truetype');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+    // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        @font-face {
+            font-family: $font-family;
+                src: url('#{$file-path}.svg##{$font-family}') format('svg');
+        }
+    }
+}
+
+@mixin din-light {
+    font-family: 'din-light', arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@mixin din-regular {
+    font-family: 'din-regular', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin din-bold {
+    font-family: 'din-bold', arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@include font-face(din-light, '../fonts/DIN2014-Light', 100, normal);
+@include font-face(din-regular, '../fonts/DIN2014-Regular', 400, normal);
+@include font-face(din-bold, '../fonts/DIN2014-Bold', 700, normal);
