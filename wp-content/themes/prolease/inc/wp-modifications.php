@@ -116,19 +116,21 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 	function add_sumtips_admin_bar_link() {
 		global $wp_admin_bar;
 		
-			if ( ! is_admin() ) {
-				$wp_admin_bar->add_menu( array(
-				'id' => 'admin_bar_switch_view',
-				'title' => __( 'Go to Dashboard'),
-				'href' => __('/wp-admin/'),
-				) );
-			} else  {
-				$wp_admin_bar->add_menu( array(
-				'id' => 'admin_bar_switch_view',
-				'title' => __( 'Go to Website'),
-				'href' => __('/'),
-				) );
-			}
+		    $site_url = site_url();
+		
+		    if ( ! is_admin() ) {
+		        $wp_admin_bar->add_menu( array(
+		        'id' => 'admin_bar_switch_view',
+		        'title' => __( 'Go to Dashboard'),
+		        'href' => __(''.$site_url.'/wp-admin/'),
+		        ) );
+		    } else  {
+		        $wp_admin_bar->add_menu( array(
+		        'id' => 'admin_bar_switch_view',
+		        'title' => __( 'Go to Website'),
+		        'href' => __(site_url()),
+		        ) );
+		    }
 	
 	}
 	add_action('admin_bar_menu', 'add_sumtips_admin_bar_link',25);

@@ -14,6 +14,9 @@
 		</div>
 		<?php if ($include_contact_info) { ?>
 		
+		    <div class="hidden-md hidden-lg">
+		    	<div class="clearfix"></div>
+		    </div>
 			<div class="col-md-<?php echo $contact_column_width; ?> col-md-offset-1">
 				<ul class="contact-list no-padding--left">
 					<li class="contact-list__item">
